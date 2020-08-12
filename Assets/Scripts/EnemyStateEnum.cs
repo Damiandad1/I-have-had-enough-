@@ -13,4 +13,19 @@ public class EnemyStateEnum : MonoBehaviour
         Death = 5,
         Triumph = 6
     }
+
+    public enum BossState
+    {
+        FirstState = 1,
+        SecondState = 2,
+        ThirdState = 3,
+        FourthState = 4
+    }
+
+    public enum BossWhatDo
+    {
+     Attack = 1,
+     Death = 2
+
+    }
 }

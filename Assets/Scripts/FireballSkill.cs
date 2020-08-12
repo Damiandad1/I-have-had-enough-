@@ -55,14 +55,32 @@ public class FireballSkill : MonoBehaviour
                         enemiesToDamage[i].GetComponent<Enemy>().TakeMeleeDamage(mediumDamage);
                     }
                     else if (distance >= farRange)
-                   
+
                     {
                         enemiesToDamage[i].GetComponent<Enemy>().TakeMeleeDamage(farDamage);
                     }
-
-                    
-                   
                 }
+                    
+                  Collider2D[] bossToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
+                  for (int i = 0; i < bossToDamage.Length; i++)
+                    {
+
+                        if (distance <= closeRange)
+                        {
+                            bossToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(closeDamage);
+                        }
+                        else if (distance >= closeRange && distance <= farRange)
+                        {
+                            bossToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(mediumDamage);
+                        }
+                        else if (distance >= farRange)
+
+                        {
+                            bossToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(farDamage);
+                        }
+
+
+                    }
               
             }
             timeBtwFireballAttack = startTimeBtwFireballAttack;

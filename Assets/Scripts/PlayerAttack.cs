@@ -26,8 +26,16 @@ public class PlayerAttack : MonoBehaviour
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeMeleeDamage(damage);
+
                 }
-            }
+
+                Collider2D[] bosssToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
+                for (int i = 0; i < bosssToDamage.Length; i++)
+                {
+                    bosssToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(damage);
+
+                }
+            } 
             timeBtwMeleeAttack = startTimeBtwMeleeAttack;
         }
         else
