@@ -1,1 +1,5 @@
+<<<<<<< master
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":135.39707946777345,"y":12.9744291305542,"z":-248.5390625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":60.96759796142578,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-37.86516189575195,"y":7.022709369659424,"z":-85.625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":36.304561614990237,"orthographic":true}
+>>>>>>> Little changes to boss

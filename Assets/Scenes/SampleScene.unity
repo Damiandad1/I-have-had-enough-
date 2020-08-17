@@ -465,6 +465,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434082050}
   m_CullTransparentMesh: 0
+--- !u!1 &450030779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450030780}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450030780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450030779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1710532558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523501133 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5117638845866204849, guid: c50f5d924dac4e5469f5b2864494df51,
@@ -1831,7 +1861,6 @@ GameObject:
   - component: {fileID: 1710532556}
   - component: {fileID: 1710532560}
   - component: {fileID: 1710532555}
-  - component: {fileID: 1710532561}
   - component: {fileID: 1710532559}
   m_Layer: 8
   m_Name: EnemyBoss
@@ -1918,7 +1947,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40.49, y: 1.25, z: 0}
   m_LocalScale: {x: 1.25438, y: 2.6408, z: 2.6408}
-  m_Children: []
+  m_Children:
+  - {fileID: 450030780}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1940,8 +1970,16 @@ MonoBehaviour:
   _player: {fileID: 1826306748}
   _enemyPrefab: {fileID: 1710532555}
   _playerPrefab: {fileID: 1826306742}
+  attackPos: {fileID: 450030780}
+  attackRange: 1.93
   hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
     type: 3}
+  attackRangeX: 1.68
+  attackRangeY: 2.9
+  player:
+    serializedVersion: 2
+    m_Bits: 1024
+  damage: 2
 --- !u!61 &1710532560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1952,7 +1990,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1968,29 +2006,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1710532561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710532554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ba981ff085280459a05b15d84f8d63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _state: 0
-  health: 3
-  speed: 0
-  hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
-    type: 3}
-  fireballHitEffect: {fileID: 6463482860411333468, guid: b7c243b6801fa84479237c862c679948,
-    type: 3}
-  _enemy: {fileID: 1710532554}
-  _player: {fileID: 1826306741}
-  moveSpots: []
-  startWaitTime: 0
 --- !u!1 &1804187061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,12 +2469,12 @@ PrefabInstance:
     - target: {fileID: 8053293323110207919, guid: 3984e78730fd21f468c33e76472e3c7b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.43
+      value: -58.2
       objectReference: {fileID: 0}
     - target: {fileID: 8053293323110207919, guid: 3984e78730fd21f468c33e76472e3c7b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 8053293323110207919, guid: 3984e78730fd21f468c33e76472e3c7b,
         type: 3}

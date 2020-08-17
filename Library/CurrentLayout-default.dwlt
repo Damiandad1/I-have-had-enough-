@@ -41,11 +41,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< master
     width: 331
     height: 592
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
+=======
+    width: 265
+    height: 457
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+>>>>>>> Little changes to boss
   m_Panes:
   - {fileID: 16}
   m_Selected: 0
@@ -67,11 +75,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 331
     y: 0
+<<<<<<< master
     width: 1185
     height: 592
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
+=======
+    width: 434
+    height: 457
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+>>>>>>> Little changes to boss
   m_Panes:
   - {fileID: 17}
   - {fileID: 12}
@@ -98,12 +114,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< master
     width: 1920
     height: 947
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 106
+=======
+    width: 1536
+    height: 731
+  m_MinSize: {x: 880, y: 492}
+  m_MaxSize: {x: 16005, y: 14042}
+  vertical: 0
+  controlID: 521
+>>>>>>> Little changes to boss
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,11 +146,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1516
     y: 0
+<<<<<<< master
     width: 404
     height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
+=======
+    width: 323
+    height: 731
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
+>>>>>>> Little changes to boss
   m_Panes:
   - {fileID: 15}
   m_Selected: 0
@@ -248,7 +281,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< master
   controlID: 107
+=======
+  controlID: 522
+>>>>>>> Little changes to boss
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +310,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< master
   controlID: 108
+=======
+  controlID: 39
+>>>>>>> Little changes to boss
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -282,6 +323,36 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< master
+=======
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 699
+    y: 0
+    width: 514
+    height: 457
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 19}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+>>>>>>> Little changes to boss
   m_EditorHideFlags: 0
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -290,7 +361,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
+<<<<<<< master
     m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -354,7 +429,11 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
+<<<<<<< master
     m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -380,7 +459,11 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
+<<<<<<< master
     m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -403,20 +486,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< master
     - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets
+=======
+    - Assets/Scripts/Enemy
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts/Enemy
+>>>>>>> Little changes to boss
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\xxnom\Desktop\Praktyki repo\I-have-had-enough-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< master
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f23a0000
     m_LastClickedID: 15090
     m_ExpandedIDs: 00000000e03a0000e23a0000e43a0000e63a0000e83a0000ea3a0000ec3a0000ee3a0000f03a0000f23a000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 11}
+    m_SelectedIDs: 003c0000
+    m_LastClickedID: 15360
+    m_ExpandedIDs: 000000005c3a00005e3a0000603a0000623a0000643a0000663a0000683a00006a3a00006c3a00006e3a000000ca9a3b
+>>>>>>> Little changes to boss
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,7 +542,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< master
     m_ExpandedIDs: 00000000e03a0000e23a0000e43a0000e63a0000e83a0000ea3a0000ec3a0000ee3a0000f03a0000f23a0000
+=======
+    m_ExpandedIDs: 000000005c3a00005e3a0000603a0000623a0000643a0000663a0000683a00006a3a00006c3a00006e3a0000
+>>>>>>> Little changes to boss
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,7 +618,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
+<<<<<<< master
     m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -554,7 +660,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
+<<<<<<< master
     m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -569,7 +679,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< master
       m_ExpandedIDs: 5cfbffff5efbffff
+=======
+      m_ExpandedIDs: 5efbffff
+>>>>>>> Little changes to boss
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -609,7 +723,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
+<<<<<<< master
     m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -629,9 +747,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< master
     m_Target: {x: 135.39708, y: 12.974429, z: -248.53906}
     speed: 2
     m_Value: {x: 135.39708, y: 12.974429, z: -248.53906}
+=======
+    m_Target: {x: -37.86516, y: 7.0227094, z: -85.625}
+    speed: 2
+    m_Value: {x: -37.86516, y: 7.0227094, z: -85.625}
+>>>>>>> Little changes to boss
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -681,9 +805,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< master
     m_Target: 60.967598
     speed: 2
     m_Value: 58.342197
+=======
+    m_Target: 36.30456
+    speed: 2
+    m_Value: 36.30456
+>>>>>>> Little changes to boss
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -724,7 +854,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
+<<<<<<< master
     m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -816,7 +950,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
+<<<<<<< master
     m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
+=======
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000,
+>>>>>>> Little changes to boss
       type: 0}
     m_Tooltip: 
   m_Pos:

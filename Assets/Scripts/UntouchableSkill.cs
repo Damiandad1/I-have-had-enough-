@@ -77,10 +77,10 @@ public class UntouchableSkill : MonoBehaviour
         _isCorRunning = false;
 
         _myRb.gameObject.GetComponent<Movement>().enabled = true;
-        if (!_isKnockActive)
-        {
-            KnockBack();
-        }
+        //if (!_isKnockActive)
+        //{
+        //    KnockBack();
+        //}
        
 
         _myRb.gameObject.layer = LayerMask.NameToLayer("Player");
