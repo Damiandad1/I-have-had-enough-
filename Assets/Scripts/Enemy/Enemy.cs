@@ -39,13 +39,18 @@ public class Enemy : MonoBehaviour
 
 	private bool isPatrolling;
 
-	
 
-
+	float faceLeft;
+	Vector3 characterScale;
+	float characterScaleX;
 
 	//
 	private void Start()
 	{
+		faceLeft = _enemy.transform.localScale.x;
+		
+		characterScale = transform.localScale;
+		characterScaleX = characterScale.x;
 		_enemy.gameObject.GetComponent<Rigidbody2D>();
 		_state = EnemyStateEnum.State.Patrol;
 		_target = _player.gameObject.GetComponent<Transform>();
@@ -58,7 +63,16 @@ public class Enemy : MonoBehaviour
 
 	private void Update()
 	{
-		
+		if (_enemy.transform.position.x >= _enemy.transform.position.x)
+		{
+			characterScale.x = characterScaleX;
+		}
+		else
+		{
+			characterScale.x = -characterScaleX;
+		}
+
+
 		CurrentState();
 
 		if (health <= 0)
@@ -73,6 +87,8 @@ public class Enemy : MonoBehaviour
 		
 	//	Dazing();
 	}
+
+	
 
 	public void TakeMeleeDamage(int damage)
 	{

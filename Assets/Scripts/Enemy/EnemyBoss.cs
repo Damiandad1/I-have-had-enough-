@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿// wchodzi gracz, jest od razu drugi etap 
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBoss : MonoBehaviour
 {
-    private EnemyStateEnum.BossState _bossState;
+    private bool canBeSecondState;
+    public EnemyStateEnum.BossState _bossState;
     private bool thirdStateIsActive;
     private bool secondStateIsActive;
     private bool firstStateIsActive;
@@ -45,9 +48,12 @@ public class EnemyBoss : MonoBehaviour
     public LayerMask player;
 
     public int damage = 2;
+    public static int enemyAmount;
+    private bool bossIsDead;
 
     private void Awake()
     {
+        bossIsDead = false;
         StorePlayerPosition();
         _bossState = EnemyStateEnum.BossState.SecondState;
         countdownTime = timeBtwSpawnNext;
@@ -60,12 +66,12 @@ public class EnemyBoss : MonoBehaviour
         {
             if (!canDash && !canBlock)
             {
-                if (Vector2.Distance(transform.position, _playerLastPosition) > stoppingDistance)
+                if (Vector2.Distance(transform.position, _playerLastPosition) >= stoppingDistance)
                 {
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(_playerPrefab.position.x, transform.position.y), speed * Time.deltaTime);
 
                 }
-                else if (Vector2.Distance(transform.position, _playerLastPosition) <= stoppingDistance)
+                else if (Vector2.Distance(transform.position, _playerLastPosition) <= 0)
                 {
                     _storedPlayerPosition = false;
                     if (!_storedPlayerPosition)
@@ -73,29 +79,49 @@ public class EnemyBoss : MonoBehaviour
                         StorePlayerPosition();
                         Debug.Log(_storedPlayerPosition);
                         _storedPlayerPosition = true;
+                        Attack();
                     }
                     // deal dmg
-                    Attack();
+                    
                 }
             }
 
         }
 
-
-        CurrentBossStatus();
-
-        if (bossHealth <= 0)
+       
+        if (bossHealth <=0)
         {
-            _bossState = EnemyStateEnum.BossState.FourthState;
+            Destroy(this.gameObject);
+            bossIsDead = true;
         }
+
+        if (bossIsDead == false)
+        {
+            ChangeStates();
+
+            CurrentBossStatus();
+        }
+    
     }
 
     private void CurrentBossStatus()
     {
         switch (_bossState)
         {
-            case EnemyStateEnum.BossState.FirstState: // Debug.Log("FirstState");
+            case EnemyStateEnum.BossState.FirstState:
                 SpawnEnemies();
+                if (enemyAmount == 0)
+                {
+                    if (canBeSecondState)
+                    {
+                        _bossState = EnemyStateEnum.BossState.SecondState;
+                    }
+                    else
+                    {
+                        _bossState = EnemyStateEnum.BossState.ThirdState;
+                    }
+                }
+             
                 // spawning 15 enemies and wait for their death
                 break;
 
@@ -119,7 +145,18 @@ public class EnemyBoss : MonoBehaviour
             case EnemyStateEnum.BossState.ThirdState: // Debug.Log("ThirdState");
                                                       // using first and third spell if 0 hp turn to fourth state
                 StartCoroutine(ChangeToFirstStateAfterSometime());
+                if (canDash && !isBlockActive)
+                {
+                    BossDash();
+                    Debug.Log("Dash");
+                }
+                else if (canBlock && !canDash && !isBlockActive)
+                {
 
+                    ShieldMove();
+
+                    Debug.Log("ShieldMove");
+                }
                 break;
 
             case EnemyStateEnum.BossState.FourthState: //Debug.Log("Death");
@@ -170,6 +207,12 @@ public class EnemyBoss : MonoBehaviour
     private IEnumerator WaitForSpawn()
     {
         _spawned = true;
+        enemyAmount++;
+        if (enemyAmount <15)
+        {
+            Instantiate(_enemyPrefab, new Vector2(-40, 0.75f), Quaternion.identity);
+        }
+     
         yield return new WaitForSeconds(1);
 
         _spawned = false;
@@ -180,18 +223,15 @@ public class EnemyBoss : MonoBehaviour
 
     private void ShieldMove()
     {
-        // once sec wait - untouchable, one move toward our player then attack on 3x length - 2 sec cd
-
+        // one sec wait - untouchable, one move toward our player then attack on 3x length - 2 sec cd
+        StartCoroutine(BlockTime());
+     
     }
 
     private void BossDash()
     {
         canBlock = false;
-        if (!_storedPlayerPosition)
-        {
-            StorePlayerPosition();
-            _storedPlayerPosition = true;
-        }
+     
         // wait 2 secs - animation, then dash toward last player position on 8x his length - 3x faster, deal 5 dmg if it collide with player
 
 
@@ -217,7 +257,11 @@ public class EnemyBoss : MonoBehaviour
             hitByDash[i].GetComponent<Health>().TookDamageFromEnemy(damage);
 
         }
-
+        if (!_storedPlayerPosition)
+        {
+            StorePlayerPosition();
+            _storedPlayerPosition = true;
+        }
         speed = 20;
         _enemyPrefab.AddForce(transform.forward * speed, ForceMode2D.Impulse);
 
@@ -260,18 +304,21 @@ public class EnemyBoss : MonoBehaviour
 
     }
 
-    private IEnumerator ChangeToSecondState()
+    private void ChangeStates()
     {
-        yield return new WaitForSeconds(30);
-        _bossState = EnemyStateEnum.BossState.SecondState;
-        secondStateIsActive = true;
-    }
-
-    private IEnumerator ChangeToThirdState()
-    {
-        yield return new WaitForSeconds(30);
-        _bossState = EnemyStateEnum.BossState.ThirdState;
-        thirdStateIsActive = true;
+        if (bossHealth <= 5)
+        {
+            canBeSecondState = false;
+            _bossState = EnemyStateEnum.BossState.ThirdState;
+        }
+        else if (bossHealth <=0)
+        {
+            _bossState = EnemyStateEnum.BossState.FourthState;
+        }
+        else if(bossHealth > 5)
+        {
+            canBeSecondState = true;
+        }
     }
 
     

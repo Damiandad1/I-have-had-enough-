@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 472235442820578570}
   - component: {fileID: 472235442820578569}
   - component: {fileID: -1728231118162631313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,5 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939dc1156df92994db09a0b8b65b9b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 8053293323110207919, guid: 3984e78730fd21f468c33e76472e3c7b,
+  _playerPrefab: {fileID: 8053293323110207904, guid: 3984e78730fd21f468c33e76472e3c7b,
+    type: 3}
+  enemyHealth: 3
+  hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
     type: 3}
