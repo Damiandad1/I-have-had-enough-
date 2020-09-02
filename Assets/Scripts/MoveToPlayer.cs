@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveToPlayer : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _playerPrefab;
+    public Rigidbody2D _playerPrefab;
  //   [SerializeField] private GameObject _currentEnemy;
 	private float stoppingDistance = 2f;
 	private float _speed = 5f;
@@ -12,16 +12,25 @@ public class MoveToPlayer : MonoBehaviour
 	public GameObject hitEffect;
 
 	private float nextAttackTime;
+
+
 	private void Update()
     {
+		if (Input.GetKey(KeyCode.I))
+		{
+			Destroy(gameObject);
+		}
+		
 		if (Vector2.Distance(transform.position, _playerPrefab.position) > stoppingDistance)
 		{
 			transform.position = Vector2.MoveTowards(transform.position, new Vector2(_playerPrefab.position.x, transform.position.y), _speed * Time.deltaTime);
-			Debug.Log(_playerPrefab.position.x);
+
+
+
 		}
 		if (enemyHealth <= 0)
 		{
-			EnemyBoss.enemyAmount--;
+			EnemyBoss._enemyAmount--;
 		}
 		if (Vector2.Distance(transform.position, _playerPrefab.position) <= stoppingDistance && _playerPrefab.gameObject.layer == LayerMask.NameToLayer("Player"))
 		{
@@ -32,6 +41,7 @@ public class MoveToPlayer : MonoBehaviour
 				nextAttackTime = Time.time + fireRate;
 			}
 		}
+		
 	}
 
 	public void TakeMeleeDamage(int damage)
@@ -45,4 +55,5 @@ public class MoveToPlayer : MonoBehaviour
 		//dazedTime = startDazedTime;
 	}
 
+	
 }
