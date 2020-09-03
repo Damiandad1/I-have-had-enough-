@@ -17,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackRangeY;
     private void Update()
     {
+        
+
         if (timeBtwMeleeAttack <= 0)
         {
             // then u can attack
@@ -26,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeMeleeDamage(damage);
-
+                 
                 }
 
                 Collider2D[] bosssToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
@@ -35,6 +37,15 @@ public class PlayerAttack : MonoBehaviour
                     bosssToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(damage);
 
                 }
+
+                //Collider2D[] spawnedMobs = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
+                //for (int i = 0; i < spawnedMobs.Length; i++)
+                //{
+                //    spawnedMobs[i].GetComponent<MoveToPlayer>().TakeMeleeDamage(damage);
+
+                //}
+
+
 
                 //Collider2D[] mobsToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 //for (int i = 0; i < mobsToDamage.Length; i++)

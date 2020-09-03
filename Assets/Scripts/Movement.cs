@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement instance;
+    
     public Rigidbody2D _myRb;
     public Animator animator;
 
@@ -44,6 +46,7 @@ public class Movement : MonoBehaviour
     public static bool isDashing = false;
     private void Start()
     {
+        instance = this;
      //   _myRb.GetComponent<LayerMask>();
         _myRb = GetComponent<Rigidbody2D>();
         dashingTime = startDashTime;
@@ -144,50 +147,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("IsJumping", false);
         }
 
-      
+     
     }
-
-
-    public void OnLanding()
-    {
-        animator.SetBool("IsJumping", false);
-    }
-
-    //     
-    //}
-
-    //[SerializeField] private float _speed;
-    //private float _dashSpeed = 50;
-    //private float jumpSpeed = 10;
-
-    //private Rigidbody2D _myRb;
-    //private Vector2 moveVelocity;
-
-    //public static bool _isDirectionRight;
-
-    //private void Awake()
-    //{
-    //    _myRb = GetComponent<Rigidbody2D>();
-    //}
-
-    //void Update()
-    //{
-
-    //}
-
-    //private void FixedUpdate()
-    //{
-    //    Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), 0);
-    //    moveVelocity = moveInput.normalized * _speed;
-
-    //    if (Input.GetKey(KeyCode.UpArrow))
-    //    {
-    //        _myRb.velocity = new Vector3(0, 10 * jumpSpeed * Time.deltaTime, 0);
-    //    }
-
-
-    //    _myRb.MovePosition(_myRb.position + moveVelocity * Time.fixedDeltaTime);
-    //}
-
 
 }

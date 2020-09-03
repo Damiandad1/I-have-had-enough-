@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 	private Transform _target;
 	[SerializeField] private GameObject _enemy;
 
-	[SerializeField] private GameObject _player;
+	[SerializeField] public GameObject _player;
 
 	public static bool _isAlive = true;
 
@@ -43,6 +43,14 @@ public class Enemy : MonoBehaviour
 	float faceLeft;
 	Vector3 characterScale;
 	float characterScaleX;
+
+	private bool isFacingLeft;
+
+	public float characterMovePos;
+
+	public Vector2 posEnem;
+	public Animator animator;
+
 
 	//
 	private void Start()
@@ -63,14 +71,20 @@ public class Enemy : MonoBehaviour
 
 	private void Update()
 	{
-		if (_enemy.transform.position.x >= _enemy.transform.position.x)
+		//Vector3 localScale;
+
+		if (posEnem.x > 0)
 		{
+			//_enemy.transform.localScale.x = -8;
 			characterScale.x = characterScaleX;
 		}
 		else
 		{
-			characterScale.x = -characterScaleX;
+			characterScale.x -= characterScaleX;
 		}
+
+		characterMovePos = Input.GetAxis("Horizontal");
+		
 
 
 		CurrentState();
@@ -79,16 +93,18 @@ public class Enemy : MonoBehaviour
 		{
 			_state = EnemyStateEnum.State.Death;
 			_isAlive = false;
+			EnemyBoss._enemyAmount--;
+			Debug.Log(EnemyBoss._enemyAmount);
 			// animacja teksturki i jej wylaczenie
 			StartCoroutine(WaitFewSeconds());
-			Destroy(this.gameObject);
+			Destroy(gameObject);
 			
 		}
 		
 	//	Dazing();
 	}
 
-	
+
 
 	public void TakeMeleeDamage(int damage)
 	{
@@ -97,7 +113,7 @@ public class Enemy : MonoBehaviour
 		health -= damage;
 		Debug.Log("damage TAKEN !" + damage);
 
-		
+
 		//dazedTime = startDazedTime;
 	}
 
@@ -164,12 +180,35 @@ public class Enemy : MonoBehaviour
 	
 	private void Patrol()
 	{
+		// Changing scale to flip object when move to spots 
+
+		Vector3 localScaleFollow = transform.localScale;
 		isPatrolling = true;
 		if (isPatrolling)
 		{
 			transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, _speed * Time.deltaTime);
-			if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+
+
+			posEnem = (moveSpots[randomSpot].transform.position - _enemy.transform.position).normalized;
+			//Debug.Log(posEnem);
+			// positions between spot and enemy from 0 to 1
+			if (posEnem.x > 0 && !isFacingLeft)   
 			{
+				isFacingLeft = true;
+				//_enemy.transform.localScale.x = -8;
+				localScaleFollow.x *= -1;
+			}
+			else if (posEnem.x < 0 && isFacingLeft)
+			{
+				isFacingLeft = false;
+				localScaleFollow.x *= -1;
+			}
+			transform.localScale = localScaleFollow;
+
+
+			if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f) // distance between 2 spots then wait some time and taking another spot
+			{
+
 				if (waitTime <= 0)
 				{
 					randomSpot = Random.Range(0, moveSpots.Length);
@@ -179,19 +218,10 @@ public class Enemy : MonoBehaviour
 				{
 					waitTime -= Time.deltaTime;
 				}
+		
 			}
 
-			////transform.position = Vector3.Lerp(_leftPoint, _rightPoint, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
-			//transform.position = Vector2.MoveTowards(transform.position, _leftPoint.position, _speed * Time.deltaTime);
-			////transform.position = Vector2.MoveTowards(_enemy.transform.position, _leftPoint.position, _speed * Time.deltaTime);
-			//if (Vector2.Distance(_enemy.transform.position, _leftPoint.position) < 1f)
-			//{
-			//	transform.position = Vector2.MoveTowards(transform.position, _rightPoint.position, _speed * Time.deltaTime);
-			//	if (Vector2.Distance(_enemy.transform.position, _rightPoint.position) <1f)
-			//	{
-			//		transform.position = Vector2.MoveTowards(transform.position, _leftPoint.position, _speed * Time.deltaTime);
-			//	}
-			//}
+	
 		}
 
 		if (Vector2.Distance(_player.transform.position, _enemy.transform.position) <= 7)
@@ -225,6 +255,21 @@ public class Enemy : MonoBehaviour
 
 	public void Follow()
 	{
+		Vector3 localScale = transform.localScale ;
+		posEnem = (_player.transform.position - _enemy.transform.position).normalized;
+		//Debug.Log(posEnem);
+		if (posEnem.x > 0 && !isFacingLeft)
+		{
+			isFacingLeft = true;
+			//_enemy.transform.localScale.x = -8;
+			localScale.x *= -1;
+		}
+		else if(posEnem.x < 0 && isFacingLeft)
+		{
+			isFacingLeft = false;
+			localScale.x *= -1;
+		}
+		transform.localScale = localScale;
 		if (Vector2.Distance(transform.position, _target.position) > stoppingDistance)
 		{
 			transform.position = Vector2.MoveTowards(transform.position, new Vector2(_target.position.x, transform.position.y), _speed * Time.deltaTime);

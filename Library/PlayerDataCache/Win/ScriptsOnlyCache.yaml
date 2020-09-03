@@ -1,14 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DialogueManager
+    - DialogueTrigger
     - Enemy
     - EnemyBoss
     - FireballSkill
+    - HP
     - Health
     - MainMenu
     - MoveToPlayer
     - Movement
     - PlayerAttack
+    - PlayerTriggerEnter
+    - TriggerDialogueCollider
     - UntouchableSkill
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -26,6 +31,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -37,6 +50,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/LevelDesign.unity:
     - Class: 1
@@ -68,15 +82,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11684}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13694}
+      Script: {instanceID: 13704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -111,23 +125,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12264}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13254}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 13280}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13682}
     - Class: 114
-      Script: {instanceID: 13948}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 14286}
+      Script: {instanceID: 14298}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,7 +181,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -176,33 +198,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
+      Script: {instanceID: 11480}
+    - Class: 114
       Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12248}
+      Script: {instanceID: 11684}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 13254}
+      Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 13570}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13694}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 14238}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 14286}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 14396}
+      Script: {instanceID: 13580}
+    - Class: 114
+      Script: {instanceID: 13682}
+    - Class: 114
+      Script: {instanceID: 13704}
+    - Class: 114
+      Script: {instanceID: 13974}
+    - Class: 114
+      Script: {instanceID: 14250}
+    - Class: 114
+      Script: {instanceID: 14298}
+    - Class: 114
+      Script: {instanceID: 14408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -312,6 +348,12 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: bdf6fb0619a344968a3dc8a14b2d6e76
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HP
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -328,6 +370,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: cefaa6c58a8f7e3f78e20204937b9255
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 2de863416813e1c378b6a3c8af09fafb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueManager
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -624,6 +678,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 09e1c1ab6e25945338ad550d52b32aa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerDialogueCollider
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -654,7 +714,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 3ce1734d05c3348737dbd403f8431b70
+      Hash: a0bb6347b7f61d3ac175e780605b3734
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -676,6 +736,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 5855b177f1a5bfa5fb2206f6776bc97b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTriggerEnter
   - hash:
       serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
@@ -726,7 +792,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 0f7621c8902a130cd9e83fc2680e70cb
+      Hash: 303a24bc31ef06b6555dd8d7dae4207b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -780,7 +846,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 586232d084c906e58035dbf97823f021
+      Hash: 27395619d4d557ff4bbb6f373f3d3c4c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyBoss
@@ -789,4 +855,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/TestingNewScripts.unity
   - Assets/Scenes/LevelDesign.unity
-  playerPath: C:/Users/damia/Desktop/BuildyPraktyki/Pierwszy/I`ve had enough!.exe
+  playerPath: C:/Users/damia/Desktop/BuildyPraktyki/Drugi/I`ve had enough!.exe

@@ -6,33 +6,42 @@ using UnityEngine;
 
 public class EnemyBoss : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D _playerOnScene;
+     [SerializeField] private Transform _playerReference;
+
+    private bool firstStateIsActive;
+
+    private Animator animator;
+
     private bool canBeSecondState;
     public EnemyStateEnum.BossState _bossState;
-    private bool thirdStateIsActive;
-    private bool secondStateIsActive;
-    private bool firstStateIsActive;
+
     private EnemyStateEnum.BossWhatDo _bossWhatDo;
     public int bossHealth = 15;
     public float speed = 5;
+    public float normalSpeed = 5;
 
     [SerializeField] private GameObject _enemy;
 
-    [SerializeField] private Rigidbody2D _player;
+   
     [SerializeField] private Rigidbody2D _enemyPrefab;
     public static bool _isAlive = true;
     private bool _spawned = false;
 
-    private int _enemyAmount = 0;
+    public static int _enemyAmount = 0;
 
     private float timeBtwSpawnNext = 2f;
     private float countdownTime;
 
     private bool canDash = true;
+    
     private float stoppingDistance = 3f;
     [SerializeField] private Transform _playerPrefab;
-
+    private int randomSpot;
     private Vector2 _playerLastPosition;
+    
     private bool _storedPlayerPosition = false;
+    
     private bool isBlockActive = false;
     private bool canBlock = true;
 
@@ -45,11 +54,20 @@ public class EnemyBoss : MonoBehaviour
 
     public float attackRangeX;
     public float attackRangeY;
-    public LayerMask player;
 
+    public LayerMask player;
+    
+    public Vector2 posEnem;
+    
     public int damage = 2;
-    public static int enemyAmount;
+  
     private bool bossIsDead;
+    
+    private bool isFacingLeft;
+    
+    public static bool playerArrived;
+
+    [SerializeField] private Transform[] moveSpots;
 
     private void Awake()
     {
@@ -62,55 +80,81 @@ public class EnemyBoss : MonoBehaviour
     private void Update()
     {
 
-        if (_bossState == EnemyStateEnum.BossState.SecondState)
-        {
-            if (!canDash && !canBlock)
+
+            FlipCharacter();
+
+            if (_bossState == EnemyStateEnum.BossState.SecondState)
             {
-                if (Vector2.Distance(transform.position, _playerLastPosition) >= stoppingDistance)
+                if (!canDash && !canBlock)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(_playerPrefab.position.x, transform.position.y), speed * Time.deltaTime);
+                    if (Vector2.Distance(transform.position, _playerLastPosition) >= stoppingDistance)
+                    {
+                    if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f) // distance between 2 spots then wait some time and taking another spot
+                    {
+            
+                            randomSpot = Random.Range(0, moveSpots.Length);
+                    }
 
                 }
-                else if (Vector2.Distance(transform.position, _playerLastPosition) <= 0)
-                {
-                    _storedPlayerPosition = false;
-                    if (!_storedPlayerPosition)
+                    else if (Vector2.Distance(transform.position, _playerLastPosition) <= 0)
                     {
-                        StorePlayerPosition();
-                        Debug.Log(_storedPlayerPosition);
-                        _storedPlayerPosition = true;
-                        Attack();
+                        _storedPlayerPosition = false;
+                        if (!_storedPlayerPosition)
+                        {
+                            StorePlayerPosition();
+                            Debug.Log(_storedPlayerPosition);
+                            _storedPlayerPosition = true;
+                           
+                        }
+                        // deal dmg
+
                     }
-                    // deal dmg
-                    
                 }
+
             }
 
-        }
 
-       
-        if (bossHealth <=0)
-        {
-            Destroy(this.gameObject);
-            bossIsDead = true;
-        }
+            if (bossHealth <= 0)
+            {
+                Destroy(this.gameObject);
+                bossIsDead = true;
+            }
 
-        if (bossIsDead == false)
-        {
-            ChangeStates();
+            if (bossIsDead == false)
+            {
+                ChangeStates();
 
-            CurrentBossStatus();
-        }
-    
+                CurrentBossStatus();
+            }
+
+        
+
     }
-
+    private void FlipCharacter()
+    {
+        Vector3 localScale = transform.localScale;
+        posEnem = (_playerPrefab.transform.position - _enemy.transform.position).normalized;
+        //Debug.Log(posEnem);
+        if (posEnem.x > 0 && !isFacingLeft)
+        {
+            isFacingLeft = true;
+            //_enemy.transform.localScale.x = -8;
+            localScale.x *= -1;
+        }
+        else if (posEnem.x < 0 && isFacingLeft)
+        {
+            isFacingLeft = false;
+            localScale.x *= -1;
+        }
+        transform.localScale = localScale;
+    }
     private void CurrentBossStatus()
     {
         switch (_bossState)
         {
             case EnemyStateEnum.BossState.FirstState:
                 SpawnEnemies();
-                if (enemyAmount == 0)
+                if (_enemyAmount == 0)
                 {
                     if (canBeSecondState)
                     {
@@ -128,16 +172,19 @@ public class EnemyBoss : MonoBehaviour
             case EnemyStateEnum.BossState.SecondState: //Debug.Log("SecondState");
                 StartCoroutine(ChangeToFirstStateAfterSometime());
                 // using first and second spell, if boss hp is less than 30% turn to third state and do it for 30 seconds then turn to first state
-                if (canDash && !isBlockActive)
+                if (canDash && !isBlockActive && !canBlock)
                 {
+                    animator.SetBool("canRush", true);
                     BossDash();
+                    animator.SetBool("canRush", false);
                     Debug.Log("dashing");
+                    canBlock = true;
                 }
                 else if (canBlock && !canDash && !isBlockActive)
                 {
 
                     TotalBlock();
-
+                    //animator.SetBool("canRush", false);
                     Debug.Log("Blocking");
                 }
                 break;
@@ -147,7 +194,9 @@ public class EnemyBoss : MonoBehaviour
                 StartCoroutine(ChangeToFirstStateAfterSometime());
                 if (canDash && !isBlockActive)
                 {
+                    animator.SetBool("canRush", true);
                     BossDash();
+                    animator.SetBool("canRush", false);
                     Debug.Log("Dash");
                 }
                 else if (canBlock && !canDash && !isBlockActive)
@@ -165,37 +214,10 @@ public class EnemyBoss : MonoBehaviour
                 break;
         }
 
-        switch (_bossWhatDo)
-        {
-            case EnemyStateEnum.BossWhatDo.Attack:
-                break;
-
-            case EnemyStateEnum.BossWhatDo.Death:
-                break;
-        }
+        
     }
     private void SpawnEnemies()
     {
-
-
-        //        if (countdownTime == 0)
-        //{
-        //    for (_enemyAmount = 0; _enemyAmount < 14; _enemyAmount++)
-        //    {
-        //        Instantiate(_enemyPrefab, new Vector2(-40, 0.75f), Quaternion.identity);
-        //        _enemyAmount = 0;
-        //        // _spawned = true;
-
-
-
-        //    }
-        //}
-        //        else
-        //        {
-        //            countdownTime -= Time.timeScale;
-        //        }
-        //    //  WaitForSpawn();
-        //    countdownTime = timeBtwSpawnNext;
 
         if (!_spawned)  // and less than 15, in method ++
         {
@@ -203,14 +225,19 @@ public class EnemyBoss : MonoBehaviour
         }
     }
 
-
+    
     private IEnumerator WaitForSpawn()
     {
         _spawned = true;
-        enemyAmount++;
-        if (enemyAmount <15)
+        _enemyAmount++;
+        if (_enemyAmount <15)
         {
-            Instantiate(_enemyPrefab, new Vector2(-40, 0.75f), Quaternion.identity);
+            
+            //Instantiate(_enemyPrefab, new Vector2(-40, 0.75f), Quaternion.identity);
+            MoveToPlayer enemyInstance = Instantiate(_enemyPrefab.GetComponent<MoveToPlayer>());
+            enemyInstance._playerPrefab = _playerOnScene;
+
+            Debug.Log(_enemyAmount);
         }
      
         yield return new WaitForSeconds(1);
@@ -349,6 +376,7 @@ public class EnemyBoss : MonoBehaviour
 
 
     }
+
 
     public void TakeBossMeleeDamage(int damage)
     {
