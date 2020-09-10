@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10596795}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,36 +148,25 @@ Transform:
   m_LocalPosition: {x: -14.1425295, y: -3.457529, z: -5.21875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 524017530}
-  - {fileID: 1076553285}
-  - {fileID: 1044012530}
+  - {fileID: 258348054}
   - {fileID: 1839058315}
-  - {fileID: 959387873}
-  - {fileID: 1635261605}
+  - {fileID: 1044012530}
+  - {fileID: 741718385}
   - {fileID: 1134934912}
   - {fileID: 578327722}
   - {fileID: 1908953080}
-  - {fileID: 741718385}
-  - {fileID: 401066909}
+  - {fileID: 1635261605}
+  - {fileID: 852765912}
+  - {fileID: 211520167}
   - {fileID: 1420643968}
+  - {fileID: 1340689766}
+  - {fileID: 1316884796}
   - {fileID: 601131229}
   - {fileID: 246915347}
-  - {fileID: 2040082668}
-  - {fileID: 1316884796}
-  - {fileID: 211520167}
-  - {fileID: 1097581912}
-  - {fileID: 34044307}
-  - {fileID: 1340689766}
-  - {fileID: 936830585}
-  - {fileID: 543136244}
-  - {fileID: 1704387487}
-  - {fileID: 1864033228}
-  - {fileID: 1949093318}
-  - {fileID: 827014342}
-  - {fileID: 1840416207}
-  - {fileID: 1372133992}
-  - {fileID: 1194426736}
   - {fileID: 750119836}
+  - {fileID: 524017530}
+  - {fileID: 804418469}
+  - {fileID: 665761961}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -192,7 +181,7 @@ GameObject:
   - component: {fileID: 17587607}
   - component: {fileID: 17587608}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (6)"
+  m_Name: Grass Hill 1 Bottom 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +263,7 @@ GameObject:
   - component: {fileID: 18342179}
   - component: {fileID: 18342178}
   m_Layer: 9
-  m_Name: New Sprite (3)
+  m_Name: Tower Ground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +282,7 @@ Transform:
   m_Children:
   - {fileID: 985368762}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 31
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &18342178
 BoxCollider2D:
@@ -382,7 +371,7 @@ GameObject:
   - component: {fileID: 34044307}
   - component: {fileID: 34044308}
   m_Layer: 0
-  m_Name: "ro\u015Blina 1 (3)"
+  m_Name: Bush 2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,12 +384,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34044306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 184.96, y: -5.11, z: 5.21875}
-  m_LocalScale: {x: 0.40102, y: 0.40102, z: 0.40102}
+  m_LocalRotation: {x: -0.1564345, y: -0.98768836, z: -0, w: 0}
+  m_LocalPosition: {x: 5.7701945, y: -0.9558912, z: 0}
+  m_LocalScale: {x: 0.74571204, y: 0.7457122, z: 0.7457122}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 18
+  m_Father: {fileID: 1340689766}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &34044308
 SpriteRenderer:
@@ -463,7 +452,7 @@ GameObject:
   - component: {fileID: 75593936}
   - component: {fileID: 75593937}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 3 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,7 +533,7 @@ GameObject:
   - component: {fileID: 77267079}
   - component: {fileID: 77267081}
   m_Layer: 9
-  m_Name: New Sprite (3)
+  m_Name: Tower Ground 3 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,7 +614,7 @@ GameObject:
   - component: {fileID: 84647972}
   - component: {fileID: 84647973}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -706,7 +695,7 @@ GameObject:
   - component: {fileID: 91199432}
   - component: {fileID: 91199433}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 1 Right Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1050,7 @@ GameObject:
   - component: {fileID: 175884435}
   - component: {fileID: 175884434}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (6)"
+  m_Name: Hill 3 Lower Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1080,7 +1069,7 @@ Transform:
   m_Children:
   - {fileID: 875983427}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &175884434
 EdgeCollider2D:
@@ -1165,7 +1154,7 @@ GameObject:
   - component: {fileID: 191603319}
   - component: {fileID: 191603318}
   m_Layer: 9
-  m_Name: New Sprite (8)
+  m_Name: Ground 1 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1272,7 +1261,7 @@ GameObject:
   - component: {fileID: 211520167}
   - component: {fileID: 211520168}
   m_Layer: 0
-  m_Name: kamienie (1)
+  m_Name: Crystals 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,9 +1277,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 140.89, y: -2.13, z: 5.21875}
   m_LocalScale: {x: 0.39132, y: 0.39132, z: 0.39132}
-  m_Children: []
+  m_Children:
+  - {fileID: 1097581912}
   m_Father: {fileID: 10596795}
-  m_RootOrder: 16
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &211520168
 SpriteRenderer:
@@ -1390,7 +1380,7 @@ GameObject:
   - component: {fileID: 246915347}
   - component: {fileID: 246915348}
   m_Layer: 0
-  m_Name: "ro\u015Blina 1 (1)"
+  m_Name: Bush 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1406,9 +1396,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 199.69254, y: -6.132471, z: 5.21875}
   m_LocalScale: {x: 0.40102, y: 0.40102, z: 0.40102}
-  m_Children: []
+  m_Children:
+  - {fileID: 2040082668}
   m_Father: {fileID: 10596795}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &246915348
 SpriteRenderer:
@@ -1553,7 +1544,7 @@ GameObject:
   - component: {fileID: 256005250}
   - component: {fileID: 256005249}
   m_Layer: 9
-  m_Name: platforma 2
+  m_Name: Boss Hill Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1647,8 +1638,117 @@ Transform:
   m_LocalScale: {x: 0.7125, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 29
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &258348053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258348054}
+  - component: {fileID: 258348056}
+  - component: {fileID: 258348055}
+  m_Layer: 0
+  m_Name: Tower Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &258348054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258348053}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071064, w: 0.7071072}
+  m_LocalPosition: {x: -37.25584, y: 5.5235147, z: 2.3057785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1875702397}
+  m_Father: {fileID: 10596795}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
+--- !u!61 &258348055
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258348053}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016693115, y: -0.34420156}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 6}
+    newSize: {x: 26.056011, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 25.77967, y: 5.311597}
+  m_EdgeRadius: 0
+--- !u!212 &258348056
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258348053}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: 8e1e84d4d1009b34e950efbab143da77, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 26.056011, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &266195797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1841,7 @@ GameObject:
   - component: {fileID: 274513958}
   - component: {fileID: 274513959}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 4 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1759,7 +1859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1665690999}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &274513959
 SpriteRenderer:
@@ -1903,7 +2003,7 @@ GameObject:
   - component: {fileID: 307205963}
   - component: {fileID: 307205964}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (5)"
+  m_Name: Grass Hill 1 Bottom 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2146,7 +2246,7 @@ GameObject:
   - component: {fileID: 341638901}
   - component: {fileID: 341638902}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 1 Left Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2314,7 +2414,7 @@ GameObject:
   - component: {fileID: 401066909}
   - component: {fileID: 401066910}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Cliff Side Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,11 +2428,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401066908}
   m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 176.97, y: -11.23, z: 5.21875}
+  m_LocalPosition: {x: -0.90252686, y: -3.6975298, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 10
+  m_Father: {fileID: 891195305}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90.00001}
 --- !u!212 &401066910
 SpriteRenderer:
@@ -2477,7 +2577,7 @@ GameObject:
   - component: {fileID: 413319690}
   - component: {fileID: 413319689}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Ground 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2496,7 +2596,7 @@ Transform:
   m_Children:
   - {fileID: 1078091540}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &413319689
 BoxCollider2D:
@@ -2990,7 +3090,7 @@ GameObject:
   - component: {fileID: 467119539}
   - component: {fileID: 467119540}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 9 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3394,7 +3494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524017530}
   m_Layer: 0
-  m_Name: Palisada
+  m_Name: Palisade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3486,8 +3586,33 @@ Transform:
   - {fileID: 2083775353}
   - {fileID: 1783948642}
   m_Father: {fileID: 10596795}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &524620927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8053293321267499882, guid: 3984e78730fd21f468c33e76472e3c7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1782956899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &524620928
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524620927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &543136243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,11 +3638,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543136243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 266.89, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 110.773735, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 21
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &543136245
 SpriteRenderer:
@@ -3742,7 +3867,7 @@ GameObject:
   - component: {fileID: 578327722}
   - component: {fileID: 578327723}
   m_Layer: 0
-  m_Name: grzyb (1)
+  m_Name: Mushroom 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3760,7 +3885,7 @@ Transform:
   m_LocalScale: {x: 0.10281001, y: 0.10281001, z: 0.10281}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: -8.847}
 --- !u!212 &578327723
 SpriteRenderer:
@@ -3934,7 +4059,7 @@ GameObject:
   - component: {fileID: 601131229}
   - component: {fileID: 601131230}
   m_Layer: 0
-  m_Name: "drzewo 2 - li\u015Bcie"
+  m_Name: Tree 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3952,7 +4077,7 @@ Transform:
   m_LocalScale: {x: 0.48134163, y: 0.48134163, z: 0.48134163}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &601131230
 SpriteRenderer:
@@ -4098,7 +4223,7 @@ GameObject:
   - component: {fileID: 626222921}
   - component: {fileID: 626222920}
   m_Layer: 9
-  m_Name: platforma 1
+  m_Name: Tree Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4116,7 +4241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &626222920
 EdgeCollider2D:
@@ -4227,7 +4352,7 @@ GameObject:
   - component: {fileID: 640688327}
   - component: {fileID: 640688328}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 10 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4309,7 +4434,7 @@ GameObject:
   - component: {fileID: 640891203}
   - component: {fileID: 640891202}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (4)"
+  m_Name: Hill 2 Lower Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4328,7 +4453,7 @@ Transform:
   m_Children:
   - {fileID: 1502654294}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &640891202
 EdgeCollider2D:
@@ -4401,6 +4526,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &641695003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641695004}
+  m_Layer: 0
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641695004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641695003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.321674, y: -0.68136555, z: -30.734375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2008960316}
+  - {fileID: 1017622288}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660649764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,6 +4639,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &665761960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 665761961}
+  m_Layer: 0
+  m_Name: Boss Hill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &665761961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665761960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 255.7, y: -5.96, z: 5.21875}
+  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_Children:
+  - {fileID: 1840416207}
+  - {fileID: 1372133992}
+  - {fileID: 1194426736}
+  m_Father: {fileID: 10596795}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683795901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,7 +4765,7 @@ GameObject:
   - component: {fileID: 689250711}
   - component: {fileID: 689250710}
   m_Layer: 9
-  m_Name: platforma 1
+  m_Name: Wooden Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4593,7 +4783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 28
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.43}
 --- !u!68 &689250710
 EdgeCollider2D:
@@ -4756,7 +4946,7 @@ GameObject:
   - component: {fileID: 723667535}
   - component: {fileID: 723667536}
   m_Layer: 9
-  m_Name: platforma 1 (2)
+  m_Name: Bridge Part 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4837,7 +5027,7 @@ GameObject:
   - component: {fileID: 741718385}
   - component: {fileID: 741718386}
   m_Layer: 0
-  m_Name: kamienie
+  m_Name: Crystals 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4855,7 +5045,7 @@ Transform:
   m_LocalScale: {x: 0.42999497, y: 0.42999497, z: 0.42999497}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &741718386
 SpriteRenderer:
@@ -4917,7 +5107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750119836}
   m_Layer: 0
-  m_Name: "Wie\u017Ca Stra\u017Cnicza"
+  m_Name: Guard Tower 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4941,7 +5131,7 @@ Transform:
   - {fileID: 1226801317}
   - {fileID: 1194728204}
   m_Father: {fileID: 10596795}
-  m_RootOrder: 29
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &756117812
 GameObject:
@@ -5117,7 +5307,7 @@ GameObject:
   - component: {fileID: 778552849}
   - component: {fileID: 778552848}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (1)"
+  m_Name: Hill 1 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5207,7 +5397,7 @@ Transform:
   m_Children:
   - {fileID: 91199432}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789020066
 GameObject:
@@ -5371,6 +5561,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &804418468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804418469}
+  m_Layer: 0
+  m_Name: Tents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &804418469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804418468}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 255.7, y: -5.96, z: 5.21875}
+  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_Children:
+  - {fileID: 959387873}
+  - {fileID: 936830585}
+  - {fileID: 543136244}
+  - {fileID: 1704387487}
+  - {fileID: 1864033228}
+  - {fileID: 1949093318}
+  - {fileID: 827014342}
+  m_Father: {fileID: 10596795}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806122104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5655,7 +5882,7 @@ GameObject:
   - component: {fileID: 818722308}
   - component: {fileID: 818722309}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 2 Left Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5750,11 +5977,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827014341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 313.57, y: -5.24, z: 5.21875}
-  m_LocalScale: {x: 0.17010549, y: 0.17010549, z: 0.17010549}
+  m_LocalPosition: {x: 572.87463, y: 7.127524, z: 0}
+  m_LocalScale: {x: 1.6839312, y: 1.6839312, z: 1.6839312}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 25
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &827014343
 SpriteRenderer:
@@ -5818,7 +6045,7 @@ GameObject:
   - component: {fileID: 835740775}
   - component: {fileID: 835740774}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1_2"
+  m_Name: Tower to Ground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5927,7 +6154,7 @@ GameObject:
   - component: {fileID: 851388149}
   - component: {fileID: 851388148}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos"
+  m_Name: Grass Hill 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5952,7 +6179,7 @@ Transform:
   - {fileID: 17587607}
   - {fileID: 1759251097}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &851388148
 EdgeCollider2D:
@@ -6039,7 +6266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852765912}
   m_Layer: 0
-  m_Name: "Wie\u017Ca Stra\u017Cnicza"
+  m_Name: Guard Tower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6053,7 +6280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852765911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -90.31755, y: 0.32147098, z: -5.21875}
+  m_LocalPosition: {x: -94.03339, y: 5.1549854, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2062502112}
@@ -6062,8 +6289,8 @@ Transform:
   - {fileID: 1138264798}
   - {fileID: 2081360625}
   - {fileID: 1303542251}
-  m_Father: {fileID: 964711550}
-  m_RootOrder: 33
+  m_Father: {fileID: 10596795}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858126547
 GameObject:
@@ -6400,7 +6627,7 @@ GameObject:
   - component: {fileID: 875983427}
   - component: {fileID: 875983428}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 3 Lower Right Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6563,7 +6790,7 @@ GameObject:
   - component: {fileID: 891195307}
   - component: {fileID: 891195306}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1_3"
+  m_Name: 'Ground to Grass '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6580,9 +6807,10 @@ Transform:
   m_LocalPosition: {x: 181.58836, y: -12.365985, z: 70.64844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 401066909}
   - {fileID: 1285801367}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &891195306
 BoxCollider2D:
@@ -6701,7 +6929,7 @@ GameObject:
   - component: {fileID: 925862267}
   - component: {fileID: 925862268}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 2 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6783,7 +7011,7 @@ GameObject:
   - component: {fileID: 927875074}
   - component: {fileID: 927875073}
   m_Layer: 9
-  m_Name: New Sprite (2)
+  m_Name: Tower Ground 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6878,7 +7106,7 @@ Transform:
   m_Children:
   - {fileID: 77267079}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932563178
 GameObject:
@@ -6891,7 +7119,7 @@ GameObject:
   - component: {fileID: 932563179}
   - component: {fileID: 932563180}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (4)"
+  m_Name: Grass Hill 1 Bottom 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6986,11 +7214,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936830584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 261.22, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 54.64437, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 20
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &936830586
 SpriteRenderer:
@@ -7198,11 +7426,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959387871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 255.7, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 4
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963781720
 GameObject:
@@ -7312,40 +7540,39 @@ Transform:
   m_LocalPosition: {x: -17.85837, y: 1.3759854, z: -70.64844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 18342177}
   - {fileID: 1378939336}
   - {fileID: 927875075}
-  - {fileID: 2087771871}
-  - {fileID: 1526532008}
-  - {fileID: 835740776}
-  - {fileID: 778552850}
   - {fileID: 1515050243}
+  - {fileID: 835740776}
+  - {fileID: 1526532008}
+  - {fileID: 778552850}
+  - {fileID: 2087771871}
   - {fileID: 971299094}
   - {fileID: 1536228805}
   - {fileID: 640891201}
   - {fileID: 413319688}
+  - {fileID: 626222919}
   - {fileID: 1944745436}
+  - {fileID: 1059030724}
   - {fileID: 1646498145}
   - {fileID: 175884433}
-  - {fileID: 626222919}
   - {fileID: 1665690999}
   - {fileID: 1148266663}
   - {fileID: 891195305}
   - {fileID: 851388147}
   - {fileID: 1429714130}
   - {fileID: 2069430958}
+  - {fileID: 1738244724}
   - {fileID: 1358052221}
-  - {fileID: 1710292525}
+  - {fileID: 689250709}
   - {fileID: 1866486957}
+  - {fileID: 1710292525}
   - {fileID: 1334619397}
   - {fileID: 2119276875}
   - {fileID: 1461081128}
   - {fileID: 1422259746}
-  - {fileID: 689250709}
   - {fileID: 256005251}
-  - {fileID: 1738244724}
-  - {fileID: 18342177}
-  - {fileID: 1059030724}
-  - {fileID: 852765912}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7361,7 +7588,7 @@ GameObject:
   - component: {fileID: 971299096}
   - component: {fileID: 971299095}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (2)"
+  m_Name: Hill 2 Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7380,7 +7607,7 @@ Transform:
   m_Children:
   - {fileID: 818722308}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!68 &971299095
 EdgeCollider2D:
@@ -7464,7 +7691,7 @@ GameObject:
   - component: {fileID: 985368762}
   - component: {fileID: 985368763}
   m_Layer: 9
-  m_Name: New Sprite (3)
+  m_Name: Tower Ground 1 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7478,7 +7705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985368761}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.04, y: -5.7456393, z: 0}
+  m_LocalPosition: {x: 0.03999901, y: -5.74564, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 18342177}
@@ -7626,7 +7853,7 @@ GameObject:
   - component: {fileID: 1002886248}
   - component: {fileID: 1002886250}
   m_Layer: 9
-  m_Name: New Sprite (3)
+  m_Name: Tower Ground 2 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7707,7 +7934,7 @@ GameObject:
   - component: {fileID: 1013759631}
   - component: {fileID: 1013759632}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 7 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7777,6 +8004,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1017622287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017622288}
+  - component: {fileID: 1017622289}
+  m_Layer: 0
+  m_Name: Timeline Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017622288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017622287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 641695004}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1017622289
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017622287}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 53d0c87954ecbec49aa3ec296f193947, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -1388577168638880075, guid: 53d0c87954ecbec49aa3ec296f193947, type: 2}
+    value: {fileID: 388187148}
+  - key: {fileID: 6772487574209952579, guid: 53d0c87954ecbec49aa3ec296f193947, type: 2}
+    value: {fileID: 388187148}
+  - key: {fileID: 7388583097798261859, guid: 53d0c87954ecbec49aa3ec296f193947, type: 2}
+    value: {fileID: 524620928}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1022238247
 GameObject:
   m_ObjectHideFlags: 0
@@ -7788,7 +8069,7 @@ GameObject:
   - component: {fileID: 1022238248}
   - component: {fileID: 1022238249}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 4 Right Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7950,7 +8231,7 @@ GameObject:
   - component: {fileID: 1024939516}
   - component: {fileID: 1024939517}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (3)"
+  m_Name: Grass Hill 1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8193,7 +8474,7 @@ GameObject:
   - component: {fileID: 1044012530}
   - component: {fileID: 1044012531}
   m_Layer: 0
-  m_Name: drzewo 1
+  m_Name: Tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8276,7 +8557,7 @@ GameObject:
   - component: {fileID: 1059030726}
   - component: {fileID: 1059030725}
   m_Layer: 9
-  m_Name: platforma 1 (2)
+  m_Name: Guard Tower 1 Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8294,7 +8575,7 @@ Transform:
   m_LocalScale: {x: 0.90074074, y: 0.9007412, z: 0.90074074}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 32
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1059030725
 EdgeCollider2D:
@@ -8567,7 +8848,7 @@ GameObject:
   - component: {fileID: 1076553285}
   - component: {fileID: 1076553286}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Cliff Side Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8580,12 +8861,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076553284}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 161.71254, y: -11.2324705, z: 5.21875}
+  m_LocalRotation: {x: 0.70710677, y: -0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -6.788376, y: -3.2259846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 1
+  m_Father: {fileID: 1665690999}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!212 &1076553286
 SpriteRenderer:
@@ -8648,7 +8929,7 @@ GameObject:
   - component: {fileID: 1078091540}
   - component: {fileID: 1078091541}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 2 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8729,7 +9010,7 @@ GameObject:
   - component: {fileID: 1097581912}
   - component: {fileID: 1097581913}
   m_Layer: 0
-  m_Name: kamienie (2)
+  m_Name: Crystals 3 Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8742,12 +9023,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097581911}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 140.94, y: -2.91, z: 5.21875}
-  m_LocalScale: {x: 0.20060237, y: 0.20060237, z: 0.20060237}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.12778047, y: -1.9932529, z: 0}
+  m_LocalScale: {x: 0.51263, y: 0.51263, z: 0.51263}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 17
+  m_Father: {fileID: 211520167}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &1097581913
 SpriteRenderer:
@@ -8810,7 +9091,7 @@ GameObject:
   - component: {fileID: 1131092878}
   - component: {fileID: 1131092879}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1_2 (1)"
+  m_Name: Tower to Ground 1 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8891,7 +9172,7 @@ GameObject:
   - component: {fileID: 1134934912}
   - component: {fileID: 1134934913}
   m_Layer: 0
-  m_Name: grzyb
+  m_Name: Mushroom 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8909,7 +9190,7 @@ Transform:
   m_LocalScale: {x: 0.10281, y: 0.10281, z: 0.10281}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1134934913
 SpriteRenderer:
@@ -9136,7 +9417,7 @@ GameObject:
   - component: {fileID: 1148266665}
   - component: {fileID: 1148266664}
   m_Layer: 9
-  m_Name: platforma 1
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9156,7 +9437,7 @@ Transform:
   - {fileID: 2034228976}
   - {fileID: 723667535}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1148266664
 EdgeCollider2D:
@@ -9427,7 +9708,7 @@ GameObject:
   - component: {fileID: 1179695757}
   - component: {fileID: 1179695758}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (2)"
+  m_Name: Grass Hill 1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9572,12 +9853,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194426734}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
-  m_LocalPosition: {x: 279.2225, y: -3.8024712, z: 5.21875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 232.85718, y: 21.3581, z: 0}
+  m_LocalScale: {x: 9.899335, y: 9.899335, z: 9.899335}
   m_Children:
   - {fileID: 2085227545}
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 28
+  m_Father: {fileID: 665761961}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &1194728202
 GameObject:
@@ -10039,7 +10320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -22
+  m_SortingOrder: -26
   m_Sprite: {fileID: 21300000, guid: a9fd5ce2c39736c4e88f88d5dd6aa248, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10076,7 +10357,7 @@ GameObject:
   - component: {fileID: 1285801367}
   - component: {fileID: 1285801368}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1_3 (1)"
+  m_Name: Ground to Grass Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10094,7 +10375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 891195305}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!212 &1285801368
 SpriteRenderer:
@@ -10268,7 +10549,7 @@ GameObject:
   - component: {fileID: 1316884796}
   - component: {fileID: 1316884797}
   m_Layer: 0
-  m_Name: grzyb (2)
+  m_Name: Mushroom 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10286,7 +10567,7 @@ Transform:
   m_LocalScale: {x: 0.10281, y: 0.10281, z: 0.10281}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1316884797
 SpriteRenderer:
@@ -10431,7 +10712,7 @@ GameObject:
   - component: {fileID: 1334619399}
   - component: {fileID: 1334619398}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (3)"
+  m_Name: Ground 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10450,7 +10731,7 @@ Transform:
   m_Children:
   - {fileID: 1013759631}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 24
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1334619398
 BoxCollider2D:
@@ -10539,7 +10820,7 @@ GameObject:
   - component: {fileID: 1340689766}
   - component: {fileID: 1340689767}
   m_Layer: 0
-  m_Name: "ro\u015Blina 1 (4)"
+  m_Name: Bush 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10555,9 +10836,10 @@ Transform:
   m_LocalRotation: {x: 0.1564345, y: 0.98768836, z: 0, w: 0}
   m_LocalPosition: {x: 188.07, y: -5.58, z: 5.21875}
   m_LocalScale: {x: 0.53776777, y: 0.53776777, z: 0.53776777}
-  m_Children: []
+  m_Children:
+  - {fileID: 34044307}
   m_Father: {fileID: 10596795}
-  m_RootOrder: 19
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 18}
 --- !u!212 &1340689767
 SpriteRenderer:
@@ -10702,7 +10984,7 @@ GameObject:
   - component: {fileID: 1358052223}
   - component: {fileID: 1358052222}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10721,7 +11003,7 @@ Transform:
   m_Children:
   - {fileID: 2077574716}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &1358052222
 BoxCollider2D:
@@ -10874,13 +11156,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372133990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 303.4525, y: -0.6624708, z: 5.21875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 472.71817, y: 52.442017, z: 0}
+  m_LocalScale: {x: 9.899335, y: 9.899335, z: 9.899335}
   m_Children:
   - {fileID: 327027134}
   - {fileID: 1141970606}
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 27
+  m_Father: {fileID: 665761961}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378939333
 GameObject:
@@ -10894,7 +11176,7 @@ GameObject:
   - component: {fileID: 1378939335}
   - component: {fileID: 1378939334}
   m_Layer: 9
-  m_Name: New Sprite (1)
+  m_Name: Tower Ground 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10990,7 +11272,7 @@ Transform:
   - {fileID: 1644067281}
   - {fileID: 1002886248}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390702028
 GameObject:
@@ -11095,7 +11377,7 @@ GameObject:
   - component: {fileID: 1420643968}
   - component: {fileID: 1420643969}
   m_Layer: 0
-  m_Name: "ro\u015Blina 1"
+  m_Name: Bush 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11113,7 +11395,7 @@ Transform:
   m_LocalScale: {x: 0.40102, y: 0.40102, z: 0.40102}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1420643969
 SpriteRenderer:
@@ -11177,7 +11459,7 @@ GameObject:
   - component: {fileID: 1422259748}
   - component: {fileID: 1422259747}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (6)"
+  m_Name: Ground 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11196,7 +11478,7 @@ Transform:
   m_Children:
   - {fileID: 640688327}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 27
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &1422259747
 BoxCollider2D:
@@ -11286,7 +11568,7 @@ GameObject:
   - component: {fileID: 1429714132}
   - component: {fileID: 1429714131}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 1_3"
+  m_Name: Grass to Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11305,7 +11587,7 @@ Transform:
   m_Children:
   - {fileID: 1750208236}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &1429714131
 BoxCollider2D:
@@ -11395,7 +11677,7 @@ GameObject:
   - component: {fileID: 1461081130}
   - component: {fileID: 1461081129}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (5)"
+  m_Name: Ground 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11414,7 +11696,7 @@ Transform:
   m_Children:
   - {fileID: 467119539}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 26
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1461081129
 BoxCollider2D:
@@ -11503,7 +11785,7 @@ GameObject:
   - component: {fileID: 1463303161}
   - component: {fileID: 1463303162}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 4 Left Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11584,7 +11866,7 @@ GameObject:
   - component: {fileID: 1502654294}
   - component: {fileID: 1502654295}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 2 Lower Right Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11747,7 +12029,7 @@ GameObject:
   - component: {fileID: 1515050242}
   - component: {fileID: 1515050241}
   m_Layer: 9
-  m_Name: platforma 2
+  m_Name: Rock Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11841,7 +12123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526532005
 GameObject:
@@ -11855,7 +12137,7 @@ GameObject:
   - component: {fileID: 1526532007}
   - component: {fileID: 1526532006}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos"
+  m_Name: Hill 1 Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11945,7 +12227,7 @@ Transform:
   m_Children:
   - {fileID: 341638901}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1529378263
 GameObject:
@@ -12121,7 +12403,7 @@ GameObject:
   - component: {fileID: 1536228807}
   - component: {fileID: 1536228806}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (3)"
+  m_Name: Hill 2 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12140,7 +12422,7 @@ Transform:
   m_Children:
   - {fileID: 925862267}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1536228806
 EdgeCollider2D:
@@ -12548,7 +12830,7 @@ GameObject:
   - component: {fileID: 1635261605}
   - component: {fileID: 1635261606}
   m_Layer: 0
-  m_Name: kamienie
+  m_Name: Crystals 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12566,7 +12848,7 @@ Transform:
   m_LocalScale: {x: 0.39132, y: 0.39132, z: 0.39132}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1635261606
 SpriteRenderer:
@@ -12635,7 +12917,7 @@ GameObject:
   - component: {fileID: 1644067281}
   - component: {fileID: 1644067282}
   m_Layer: 9
-  m_Name: New Sprite
+  m_Name: Ledge Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12717,7 +12999,7 @@ GameObject:
   - component: {fileID: 1646498147}
   - component: {fileID: 1646498146}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (5)"
+  m_Name: Hill 3 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12736,7 +13018,7 @@ Transform:
   m_Children:
   - {fileID: 1698140180}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1646498146
 EdgeCollider2D:
@@ -12984,7 +13266,7 @@ GameObject:
   - component: {fileID: 1665691001}
   - component: {fileID: 1665691000}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (2)"
+  m_Name: Ground 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13001,9 +13283,10 @@ Transform:
   m_LocalPosition: {x: 158.64, y: -12.84, z: 70.64844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1076553285}
   - {fileID: 274513958}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &1665691000
 BoxCollider2D:
@@ -13173,7 +13456,7 @@ GameObject:
   - component: {fileID: 1698140180}
   - component: {fileID: 1698140181}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Hill 3 Right Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13268,11 +13551,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704387486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 272.61, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 167.39764, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 22
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1704387488
 SpriteRenderer:
@@ -13336,7 +13619,7 @@ GameObject:
   - component: {fileID: 1710292527}
   - component: {fileID: 1710292526}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (7)"
+  m_Name: Hill 4 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13349,13 +13632,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710292524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 253.79, y: -13.14, z: 70.64844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1022238248}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 22
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1710292526
 EdgeCollider2D:
@@ -13522,7 +13805,7 @@ GameObject:
   - component: {fileID: 1738244726}
   - component: {fileID: 1738244725}
   m_Layer: 9
-  m_Name: platforma 1 (1)
+  m_Name: Guard Tower 2 Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13540,7 +13823,7 @@ Transform:
   m_LocalScale: {x: 0.90074074, y: 0.9007412, z: 0.90074074}
   m_Children: []
   m_Father: {fileID: 964711550}
-  m_RootOrder: 30
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1738244725
 EdgeCollider2D:
@@ -13732,7 +14015,7 @@ GameObject:
   - component: {fileID: 1750208236}
   - component: {fileID: 1750208237}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 1_3 (1)"
+  m_Name: Grass to Ground Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13813,7 +14096,7 @@ GameObject:
   - component: {fileID: 1759251097}
   - component: {fileID: 1759251098}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (7)"
+  m_Name: Grass Hill 1 Bottom 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14473,7 +14756,7 @@ GameObject:
   - component: {fileID: 1839058315}
   - component: {fileID: 1839058316}
   m_Layer: 0
-  m_Name: "wie\u017Ca"
+  m_Name: The Dark Lord's Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14491,7 +14774,7 @@ Transform:
   m_LocalScale: {x: 0.4052779, y: 0.4052779, z: 0.4052779}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1839058316
 SpriteRenderer:
@@ -14618,12 +14901,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840416205}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
-  m_LocalPosition: {x: 289.2025, y: -0.65247107, z: 5.21875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 331.65265, y: 52.541008, z: 0}
+  m_LocalScale: {x: 9.899335, y: 9.899335, z: 9.899335}
   m_Children:
   - {fileID: 756117813}
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 26
+  m_Father: {fileID: 665761961}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &1840781490
 GameObject:
@@ -14731,11 +15014,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864033227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 278.13, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 222.04216, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 23
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1864033229
 SpriteRenderer:
@@ -14799,7 +15082,7 @@ GameObject:
   - component: {fileID: 1866486959}
   - component: {fileID: 1866486958}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 - skos (8)"
+  m_Name: Hill 4 Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14818,7 +15101,7 @@ Transform:
   m_Children:
   - {fileID: 1463303161}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 23
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!68 &1866486958
 EdgeCollider2D:
@@ -14967,6 +15250,87 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 8, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1875702396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875702397}
+  - component: {fileID: 1875702398}
+  m_Layer: 0
+  m_Name: Tower Wall Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1875702397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875702396}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: -5.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 258348054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!212 &1875702398
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875702396}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8e1e84d4d1009b34e950efbab143da77, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 26.056011, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15175,7 +15539,7 @@ GameObject:
   - component: {fileID: 1899739171}
   - component: {fileID: 1899739172}
   m_Layer: 0
-  m_Name: "pod\u0142o\u017Ce 3 - skos (1)"
+  m_Name: Grass Hill 1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15337,7 +15701,7 @@ GameObject:
   - component: {fileID: 1908953080}
   - component: {fileID: 1908953081}
   m_Layer: 0
-  m_Name: drzewo 2
+  m_Name: Tree 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15355,7 +15719,7 @@ Transform:
   m_LocalScale: {x: 0.3793548, y: 0.3793548, z: 0.3793548}
   m_Children: []
   m_Father: {fileID: 10596795}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1908953081
 SpriteRenderer:
@@ -15581,7 +15945,7 @@ GameObject:
   - component: {fileID: 1944745438}
   - component: {fileID: 1944745437}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15600,7 +15964,7 @@ Transform:
   m_Children:
   - {fileID: 75593936}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &1944745437
 BoxCollider2D:
@@ -15703,11 +16067,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949093317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 283.80005, y: -5.96, z: 5.21875}
-  m_LocalScale: {x: 0.10101689, y: 0.10101689, z: 0.10101689}
+  m_LocalPosition: {x: 278.1718, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 24
+  m_Father: {fileID: 804418469}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1949093319
 SpriteRenderer:
@@ -15759,6 +16123,115 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2008960315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008960316}
+  - component: {fileID: 2008960318}
+  - component: {fileID: 2008960317}
+  m_Layer: 9
+  m_Name: Tower Ground 3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2008960316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008960315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -56.1, y: -6.9, z: 27.821404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2052749297}
+  m_Father: {fileID: 641695004}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2008960317
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008960315}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016693115, y: -0.34420156}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 6}
+    newSize: {x: 42.031548, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 25.77967, y: 5.311597}
+  m_EdgeRadius: 0
+--- !u!212 &2008960318
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008960315}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8e1e84d4d1009b34e950efbab143da77, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 42.031548, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2034228975
 GameObject:
   m_ObjectHideFlags: 0
@@ -15770,7 +16243,7 @@ GameObject:
   - component: {fileID: 2034228976}
   - component: {fileID: 2034228977}
   m_Layer: 9
-  m_Name: platforma 1 (1)
+  m_Name: Bridge Part 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15851,7 +16324,7 @@ GameObject:
   - component: {fileID: 2040082668}
   - component: {fileID: 2040082669}
   m_Layer: 0
-  m_Name: "ro\u015Blina 1 (2)"
+  m_Name: Bush 3-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15865,11 +16338,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040082667}
   m_LocalRotation: {x: -0.077048324, y: 0.9970274, z: -0, w: 0}
-  m_LocalPosition: {x: 197.63254, y: -6.3224707, z: 5.21875}
-  m_LocalScale: {x: 0.40102, y: 0.40101996, z: 0.40102}
+  m_LocalPosition: {x: -5.136895, y: -0.47379082, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 10596795}
-  m_RootOrder: 14
+  m_Father: {fileID: 246915347}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: -8.838}
 --- !u!212 &2040082669
 SpriteRenderer:
@@ -15932,7 +16405,7 @@ GameObject:
   - component: {fileID: 2040733614}
   - component: {fileID: 2040733615}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 8 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15997,6 +16470,87 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 2
   m_Size: {x: 18, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &2052749296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052749297}
+  - component: {fileID: 2052749298}
+  m_Layer: 9
+  m_Name: Tower Ground 3 Bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2052749297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052749296}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.016, y: -5.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2008960316}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!212 &2052749298
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052749296}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8e1e84d4d1009b34e950efbab143da77, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 42.064743, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16095,7 +16649,7 @@ GameObject:
   - component: {fileID: 2069430960}
   - component: {fileID: 2069430959}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1"
+  m_Name: Ground 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16114,7 +16668,7 @@ Transform:
   m_Children:
   - {fileID: 84647972}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2069430959
 BoxCollider2D:
@@ -16203,7 +16757,7 @@ GameObject:
   - component: {fileID: 2077574716}
   - component: {fileID: 2077574717}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (1)"
+  m_Name: Ground 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16528,7 +17082,7 @@ GameObject:
   - component: {fileID: 2087771870}
   - component: {fileID: 2087771869}
   m_Layer: 9
-  m_Name: New Sprite (7)
+  m_Name: Ground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16623,7 +17177,7 @@ Transform:
   m_Children:
   - {fileID: 191603317}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097018481
 GameObject:
@@ -16880,7 +17434,7 @@ GameObject:
   - component: {fileID: 2119276877}
   - component: {fileID: 2119276876}
   m_Layer: 9
-  m_Name: "pod\u0142o\u017Ce 1 (4)"
+  m_Name: Ground 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16899,7 +17453,7 @@ Transform:
   m_Children:
   - {fileID: 2040733614}
   m_Father: {fileID: 964711550}
-  m_RootOrder: 25
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!61 &2119276876
 BoxCollider2D:
