@@ -11400,14 +11400,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerOnScene: {fileID: 8053293322478061306}
   _playerReference: {fileID: 8053293322478061301}
-  _bossState: 1
-  bossHealth: 15
-  speed: 5
-  normalSpeed: 2
   _enemy: {fileID: 1710532554}
   _enemyPrefab: {fileID: 1231113772642952509, guid: bc0453bcc0671a74d9b4f92b21b56215,
     type: 3}
   _playerPrefab: {fileID: 8053293322478061301}
+  moveSpots:
+  - {fileID: 1487089811}
+  - {fileID: 1546253107}
+  bossHealth: 15
+  speed: 5
+  normalSpeed: 2
+  _bossState: 1
   attackPos: {fileID: 450030780}
   attackRange: 2.57
   hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
@@ -11419,9 +11422,6 @@ MonoBehaviour:
     m_Bits: 1024
   posEnem: {x: 0, y: 0}
   damage: 2
-  moveSpots:
-  - {fileID: 1487089811}
-  - {fileID: 1546253107}
 --- !u!61 &1710532560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15667,7 +15667,7 @@ PrefabInstance:
     - target: {fileID: 4141928906542732562, guid: b91ea75aa4a4762499f2bc54467f965d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 4141928906542732562, guid: b91ea75aa4a4762499f2bc54467f965d,
         type: 3}
