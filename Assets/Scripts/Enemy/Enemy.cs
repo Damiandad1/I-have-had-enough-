@@ -84,7 +84,13 @@ public class Enemy : MonoBehaviour
 		}
 
 		characterMovePos = Input.GetAxis("Horizontal");
-		
+
+
+
+		if (Health.myHealth <= 0)
+		{
+			this.gameObject.SetActive(true);
+		}
 
 
 		CurrentState();
@@ -94,14 +100,15 @@ public class Enemy : MonoBehaviour
 			_state = EnemyStateEnum.State.Death;
 			_isAlive = false;
 			EnemyBoss._enemyAmount--;
-			Debug.Log(EnemyBoss._enemyAmount);
+			//	Debug.Log(EnemyBoss._enemyAmount);
 			// animacja teksturki i jej wylaczenie
 			StartCoroutine(WaitFewSeconds());
-			Destroy(gameObject);
-			
+			this.gameObject.SetActive(false);
+
 		}
-		
-	//	Dazing();
+
+
+		//	Dazing();
 	}
 
 

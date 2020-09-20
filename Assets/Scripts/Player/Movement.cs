@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour
 
      
 
-        if (Input.GetKey(KeyCode.C) && canDash) // wykonuje sie dash przez sekunde, zmienia dash na falsa, czeka 10 sekund i znowu mozna przez sekunde dashowac       yield return moze dashowac przez 2 sekundy potem zmienia na false i 10 sek czekania
+        if (Input.GetKey(KeyCode.K) && canDash) // wykonuje sie dash przez sekunde, zmienia dash na falsa, czeka 10 sekund i znowu mozna przez sekunde dashowac       yield return moze dashowac przez 2 sekundy potem zmienia na false i 10 sek czekania
         {
             
             StartCoroutine(WaitForDash());

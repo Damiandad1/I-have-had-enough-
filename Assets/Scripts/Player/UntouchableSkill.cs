@@ -23,6 +23,7 @@ public class UntouchableSkill : MonoBehaviour
 
     public Rigidbody2D _enemyRb;
     private bool _isKnockActive;
+    public Animator animator;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class UntouchableSkill : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.V) && _isReadyToUse)
+        if (Input.GetKey(KeyCode.L) && _isReadyToUse)
         {
             Skill();
         }
@@ -56,6 +57,7 @@ public class UntouchableSkill : MonoBehaviour
 
     private IEnumerator RegenHP()
     {
+        animator.SetBool("IsRegenSpellActive", true);
         _myRb.gameObject.GetComponent<Movement>().enabled = false;
         _isCorRunning = true;
         yield return new WaitForSeconds(1f);
@@ -75,6 +77,7 @@ public class UntouchableSkill : MonoBehaviour
         _secondsPassed++;
         yield return new WaitForSeconds(1f);
         _isCorRunning = false;
+        animator.SetBool("IsRegenSpellActive", false);
 
         _myRb.gameObject.GetComponent<Movement>().enabled = true;
         //if (!_isKnockActive)

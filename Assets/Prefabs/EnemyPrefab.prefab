@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 1231113772642952449}
   - component: {fileID: 1231113772642952510}
   - component: {fileID: 1231113772642952509}
-  - component: {fileID: 9195341235121945947}
   - component: {fileID: 5860150613220974873}
-  - component: {fileID: -5904018597045305394}
+  - component: {fileID: -134636733918225604}
   m_Layer: 8
   m_Name: EnemyPrefab
   m_TagString: Untagged
@@ -82,22 +81,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
---- !u!114 &9195341235121945947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231113772642952508}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 939dc1156df92994db09a0b8b65b9b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 0}
-  enemyHealth: 3
-  hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
-    type: 3}
 --- !u!212 &5860150613220974873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,7 +131,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5904018597045305394
+--- !u!114 &-134636733918225604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,19 +143,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ba981ff085280459a05b15d84f8d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _state: 3
+  _state: 0
   health: 3
-  speed: 5
+  speed: 0
   hitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
     type: 3}
-  fireballHitEffect: {fileID: 6463482860411333468, guid: b7c243b6801fa84479237c862c679948,
+  fireballHitEffect: {fileID: 2995347330504428709, guid: 526e1c85b157add4985a9abb96a8056b,
     type: 3}
   _enemy: {fileID: 1231113772642952508}
-  _player: {fileID: 4141928906542732574, guid: b91ea75aa4a4762499f2bc54467f965d, type: 3}
-  moveSpots:
-  - {fileID: 4796136360138828969, guid: 298238bcd475638479246ff6ebcfcf73, type: 3}
-  - {fileID: 2828026885598633493, guid: 296327d76f0ef2a41a9f30ef322af65c, type: 3}
-  startWaitTime: 3
+  _player: {fileID: 8053293323110207907, guid: 3984e78730fd21f468c33e76472e3c7b, type: 3}
+  moveSpots: []
+  startWaitTime: 0
   characterMovePos: 0
   posEnem: {x: 0, y: 0}
   animator: {fileID: 0}

@@ -21,11 +21,7 @@ public class SpawnMobs : MonoBehaviour
     {
         if (Health.myHealth <= 0)
         {
-            if (_canSpawn)
-            {
-                StartCoroutine(Some());
-                _canSpawn = false;
-            }
+            this.gameObject.SetActive(true);
         }
       
       

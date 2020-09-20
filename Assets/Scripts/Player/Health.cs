@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -12,14 +13,34 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    Animator animator;
+
     private void Update()
     {
+        if (myHealth <= 0)
+        {
+            myHealth = 15;
+            SceneManager.LoadScene(1);
+            //StartCoroutine(DeathAnimation());
+        }
+
         CheckingHealths();
 
         DecreaseHealth();
         IncreaseHealth();
+
+
       
     }
+    private IEnumerator DeathAnimation()
+    {
+        animator.SetBool("IsDead", true);
+        yield return new WaitForSeconds(1);
+        animator.SetBool("IsDead", false);
+      
+
+    }
+
     public void TookDamageFromEnemy(int damage)
     {
         // play a hurt sound 

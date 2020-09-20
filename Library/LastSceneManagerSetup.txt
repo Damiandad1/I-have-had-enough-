@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TestingNewScripts.unity
+- path: Assets/Scenes/LevelDesign.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

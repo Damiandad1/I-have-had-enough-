@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask whatIsEnemies;
     public int damage;
 
+    public Animator animator;
 
     public float attackRangeX;
     public float attackRangeY;
@@ -22,8 +23,9 @@ public class PlayerAttack : MonoBehaviour
         if (timeBtwMeleeAttack <= 0)
         {
             // then u can attack
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.I))
             {
+                animator.SetBool("IsAttacking", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
@@ -37,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
                     bosssToDamage[i].GetComponent<EnemyBoss>().TakeBossMeleeDamage(damage);
 
                 }
+               
 
                 //Collider2D[] spawnedMobs = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 //for (int i = 0; i < spawnedMobs.Length; i++)
@@ -55,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
                 //}
             } 
             timeBtwMeleeAttack = startTimeBtwMeleeAttack;
+            animator.SetBool("IsAttacking", false);
         }
         else
         {

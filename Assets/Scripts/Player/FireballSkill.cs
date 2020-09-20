@@ -26,8 +26,8 @@ public class FireballSkill : MonoBehaviour
 
     public float attackRangeX;
     public float attackRangeY;
+    public Animator animator;
 
-   
     private void Update()
     {
         if (Enemy._isAlive)
@@ -40,8 +40,10 @@ public class FireballSkill : MonoBehaviour
         if (timeBtwFireballAttack <= 0)
         {
             // then u can attack
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetKey(KeyCode.J))
             {
+                Debug.Log("flame");
+                animator.SetBool("IsFlameSpellActive", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
@@ -81,7 +83,7 @@ public class FireballSkill : MonoBehaviour
 
 
                     }
-              
+                animator.SetBool("IsFlameSpellActive", false);
             }
             timeBtwFireballAttack = startTimeBtwFireballAttack;
         }

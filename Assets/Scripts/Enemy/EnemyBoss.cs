@@ -8,13 +8,17 @@ public class EnemyBoss : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _playerOnScene;
     [SerializeField] private Transform _playerReference;
-    [SerializeField] private GameObject _enemy;
+    [SerializeField] private Transform _enemy;
     [SerializeField] private Rigidbody2D _enemyPrefab;
     [SerializeField] private Transform _playerPrefab;
     [SerializeField] private Transform[] moveSpots;
 
-    public int bossHealth = 15;
-    public float speed = 5;
+    [SerializeField] private GameObject _endGameText;
+
+    private Transform _testTransform;
+
+    public static int bossHealth = 15;
+    public float speed = 10;
     public float normalSpeed = 5;
     public static int _enemyAmount = 0;
     public EnemyStateEnum.BossState _bossState;
@@ -32,53 +36,67 @@ public class EnemyBoss : MonoBehaviour
     private bool _firstStateIsActive;
     private Animator _animator;
     private bool _canBeSecondState;
-    private EnemyStateEnum.BossWhatDo _bossWhatDo; 
+    private EnemyStateEnum.BossWhatDo _bossWhatDo;
     private bool _spawned = false;
     private float _timeBtwSpawnNext = 2f;
     private float _countdownTime;
-    private bool canDash = true;   
-    private float _stoppingDistance = 3f; 
+    private bool canDash;
+    //   private float _stoppingDistance = 3f; 
     private int _randomSpot;
-    private Vector2 _playerLastPosition;   
-    private bool _storedPlayerPosition = false;   
+    private int _previousNumber;
+    private Vector2 _playerLastPosition;
+    private bool _storedPlayerPosition = false;
     private bool _isBlockActive = false;
     private bool _canBlock = true;
     private float _nextAttackTime;
-    private bool _bossIsDead; 
+    private bool _bossIsDead;
     private bool _isFacingLeft;
 
-    private int skillSwitch;
+    public int skillSwitch;
 
     private void Awake()
     {
+        _testTransform = GetComponent<Transform>();
+
         _bossIsDead = false;
         StorePlayerPosition();
         _bossState = EnemyStateEnum.BossState.SecondState;
         _countdownTime = _timeBtwSpawnNext;
+        skillSwitch = 1;
+        canDash = true;
     }
 
     private void Update()
     {
+        //  _testTransform.position = Vector2.MoveTowards(transform.position, _playerOnScene.position, speed * Time.deltaTime);
+        //transform.position =
+        AnotherSwitch();
+        FlipCharacter();
 
-            FlipCharacter();
-
-           
 
 
-            if (bossHealth <= 0)
-            {
-                Destroy(this.gameObject);
-                _bossIsDead = true;
-            }
 
-            if (_bossIsDead == false)
-            {
-                ChangeStates();
+        if (bossHealth <= 0)
+        {
+            this.gameObject.SetActive(false);
+            _endGameText.gameObject.SetActive(true);
+            // Destroy(this.gameObject);
+            _bossIsDead = true;
+        }
+        if (Health.myHealth <= 0)
+        {
+            bossHealth = 15;
+            this.gameObject.SetActive(true);
+        }
 
-                CurrentBossStatus();
-            }
+        if (_bossIsDead == false)
+        {
+            ChangeStates();
 
-        
+            //    CurrentBossStatus();
+        }
+
+
 
     }
     private void FlipCharacter()
@@ -105,17 +123,17 @@ public class EnemyBoss : MonoBehaviour
         {
             case EnemyStateEnum.BossState.FirstState:
                 SpawnEnemies();
-                
-                    if (_canBeSecondState)
-                    {
-                        _bossState = EnemyStateEnum.BossState.SecondState;
-                    }
-                    else
-                    {
-                        _bossState = EnemyStateEnum.BossState.ThirdState;
-                    }
-                
-             
+
+                if (_canBeSecondState)
+                {
+                    _bossState = EnemyStateEnum.BossState.SecondState;
+                }
+                else
+                {
+                    _bossState = EnemyStateEnum.BossState.ThirdState;
+                }
+
+
                 // spawning 15 enemies and wait for their death
                 break;
 
@@ -164,16 +182,58 @@ public class EnemyBoss : MonoBehaviour
                 break;
         }
 
-        
+
     }
     private void AnotherSwitch()
     {
         switch (skillSwitch)
         {
             case 1:
+                StartCoroutine(FirstSpell());
+
+                break;
+            case 2:
+                BossDash();
+                StartCoroutine(SecondSpell());
+
+                break;
+            case 3:
+                StartCoroutine(ThirdSpell());
+
                 break;
         }
     }
+    private IEnumerator FirstSpell()
+    {
+        ShieldMove();
+        //  ShieldMove();
+        // _animator.SetBool("canRush", true);
+        yield return new WaitForSeconds(2);
+        // _animator.SetBool("canRush", false);
+
+        yield return new WaitForSeconds(10);
+        canDash = true;
+        skillSwitch = 2;
+    }
+
+    private IEnumerator SecondSpell()  // dash
+    {
+        if (canDash)
+        {
+            BossDash();
+
+        }
+        yield return new WaitForSeconds(10);
+        skillSwitch = 3;
+    }
+
+    private IEnumerator ThirdSpell()
+    {
+        TotalBlock();
+        yield return new WaitForSeconds(10);
+        skillSwitch = 1;
+    }
+
     private void SpawnEnemies()
     {
 
@@ -183,21 +243,21 @@ public class EnemyBoss : MonoBehaviour
         }
     }
 
-    
+
     private IEnumerator WaitForSpawn()
     {
         _spawned = true;
         _enemyAmount++;
-        if (_enemyAmount <15)
+        if (_enemyAmount < 15)
         {
-            
+
             //Instantiate(_enemyPrefab, new Vector2(-40, 0.75f), Quaternion.identity);
             MoveToPlayer enemyInstance = Instantiate(_enemyPrefab.GetComponent<MoveToPlayer>());
             enemyInstance._playerPrefab = _playerOnScene;
 
             Debug.Log(_enemyAmount);
         }
-     
+
         yield return new WaitForSeconds(1);
 
         _spawned = false;
@@ -210,77 +270,143 @@ public class EnemyBoss : MonoBehaviour
     {
         // one sec wait - untouchable, one move toward our player then attack on 3x length - 2 sec cd
         StartCoroutine(BlockTime());
-     
+
     }
 
     private void BossDash()
     {
         _canBlock = false;
-     
+        // canDash = false;
+        //   int i;
+        speed = 10;
         // wait 2 secs - animation, then dash toward last player position on 8x his length - 3x faster, deal 5 dmg if it collide with player
+        _randomSpot = Random.Range(0, 1);
+
+        // _previousNumber = _randomSpot;
+        // _randomSpot = Random.Range(0, 1);
 
 
-        StartCoroutine(MakingEnemyDash());
+        Debug.Log(_randomSpot);
+
+        transform.position = Vector2.MoveTowards(transform.position, moveSpots[_randomSpot].position, speed * Time.deltaTime);
+
+
+
+
+        //else if(Vector2.Distance(transform.position, moveSpots[1].position) <= 0.2f)
+        //{
+        //    Debug.Log("DashTo0");
+        //    transform.position = Vector2.MoveTowards(transform.position, moveSpots[0].position, speed * Time.deltaTime);
+        //}
+        //else if (Vector2.Distance(transform.position, moveSpots[1].position) <= 0.2f)
+        //{
+        //    transform.position = Vector2.MoveTowards(transform.position, moveSpots[0].position, speed * Time.deltaTime);
+
+        //}
+
+        // canDash = true;
+        //    StartCoroutine(MakingEnemyDash());
 
     }
 
     private void TotalBlock()
     {
         // untouchable for 5 secs and look on player, if in 5 secs boss got dmg then cancel this animation, else after 5 secs deal 6 dmg in two sides, 5 sec cd
-        StartCoroutine(BlockTime());
+        StartCoroutine(ThirdSpellBlock());
     }
+
 
     private IEnumerator MakingEnemyDash()
     {
-        canDash = false;
-        // animation for 2 secs then doing dash
-        // transform.position = Vector2.MoveTowards(transform.position, _playerLastPosition, speed * Time.deltaTime);
+        //canDash = false;
+        //// animation for 2 secs then doing dash
+        //// transform.position = Vector2.MoveTowards(transform.position, _playerLastPosition, speed * Time.deltaTime);
 
-        Collider2D[] hitByDash = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, player);
-        for (int i = 0; i < hitByDash.Length; i++)
-        {
-            hitByDash[i].GetComponent<Health>().TookDamageFromEnemy(damage);
+        //Collider2D[] hitByDash = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, player);
+        //for (int i = 0; i < hitByDash.Length; i++)
+        //{
+        //    hitByDash[i].GetComponent<Health>().TookDamageFromEnemy(damage);
 
-        }
-        if (!_storedPlayerPosition)
-        {
-            StorePlayerPosition();
-            _storedPlayerPosition = true;
-        }
-        speed = 20;
-        _enemyPrefab.AddForce(transform.forward * speed, ForceMode2D.Impulse);
+        //}
+        //if (!_storedPlayerPosition)
+        //{
+        //    StorePlayerPosition();
+        //    _storedPlayerPosition = true;
+        //}
+        //speed = 20;
+        //_enemyPrefab.AddForce(transform.forward * speed, ForceMode2D.Impulse);
 
         //if (Vector2.Distance(_enemyPrefab.position, _playerLastPosition) < 0)
         //{
 
         //}
+        canDash = false;
 
-        yield return new WaitForSeconds(2);
-        speed = 5;
-        _canBlock = true;
+        _enemy.position = Vector2.MoveTowards(_enemy.position, moveSpots[0].position, speed * Time.deltaTime);
+        yield return new WaitForSeconds(5);
 
-        yield return new WaitForSeconds(5); // cooldown
+        _enemy.position = Vector2.MoveTowards(transform.position, moveSpots[1].position, speed * Time.deltaTime);
+        yield return new WaitForSeconds(5);
+
         canDash = true;
 
     }
     private IEnumerator BlockTime()
     {
-        _isBlockActive = true;
+        //     Debug.Log("BlockTimeSpell");
         canDash = false;
-        _enemyPrefab.gameObject.layer = LayerMask.NameToLayer("Untouchable");
+        _enemy.gameObject.layer = LayerMask.NameToLayer("Untouchable");
+        //   Debug.Log("untouchable");
         yield return new WaitForSeconds(5);
-        _enemyPrefab.gameObject.layer = LayerMask.NameToLayer("Enemy");
+        _enemy.gameObject.layer = LayerMask.NameToLayer("Enemy");
+        if (Vector2.Distance(transform.position, _playerOnScene.position) <= 2 && _playerOnScene.gameObject.layer == LayerMask.NameToLayer("Player") && !_isBlockActive)
+        {
+            _isBlockActive = true;
+            //Health.myHealth -= 2;
+            //Debug.Log("Hit for 2");
+            Attack();
+
+
+        }
         yield return new WaitForSeconds(10);
         _isBlockActive = false;
-        if (!_storedPlayerPosition)
-        {
-            StorePlayerPosition();
-            _storedPlayerPosition = true;
-        }
-        yield return new WaitForSeconds(2);
+
+        //    yield return new WaitForSeconds(2);
         canDash = true;
     }
+    private IEnumerator ThirdSpellBlock()
+    {
+        //  Debug.Log("ThirdTimeSpell");
 
+        _enemy.gameObject.layer = LayerMask.NameToLayer("Untouchable");
+        yield return new WaitForSeconds(5);
+        if (Vector2.Distance(transform.position, _playerOnScene.position) <= 4 && _playerOnScene.gameObject.layer == LayerMask.NameToLayer("Player") && !_isBlockActive)
+        {
+            _isBlockActive = true;
+            Health.myHealth -= 6;
+            //   Debug.Log("Hit for 6");
+
+
+        }
+        yield return new WaitForSeconds(10);
+        _isBlockActive = false;
+        if (Vector2.Distance(transform.position, _playerOnScene.position) >= 0.8f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(_playerOnScene.position.x, transform.position.y), speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, _playerOnScene.position) == 0.8f)
+            {
+                Attack();
+                yield return new WaitForSeconds(1);
+            }
+
+        }
+
+
+
+
+        yield return new WaitForSeconds(5);
+
+    }
     private IEnumerator ChangeToFirstStateAfterSometime()
     {
         yield return new WaitForSeconds(30);
@@ -296,17 +422,17 @@ public class EnemyBoss : MonoBehaviour
             _canBeSecondState = false;
             _bossState = EnemyStateEnum.BossState.ThirdState;
         }
-        else if (bossHealth <=0)
+        else if (bossHealth <= 0)
         {
             _bossState = EnemyStateEnum.BossState.FourthState;
         }
-        else if(bossHealth > 5)
+        else if (bossHealth > 5)
         {
             _canBeSecondState = true;
         }
     }
 
-    
+
     private void StorePlayerPosition()
     {
         _playerLastPosition = _playerPrefab.transform.position;
@@ -320,11 +446,11 @@ public class EnemyBoss : MonoBehaviour
 
     private void Attack()
     {
-        if (Vector2.Distance(_playerPrefab.position, _enemy.transform.position) < 2f && _playerPrefab.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (Vector2.Distance(_playerPrefab.position, _enemy.transform.position) <= 1f && _playerPrefab.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             if (Time.time > _nextAttackTime)
             {
-               // Collider2D attackRange = Physics2D.OverlapCircleAll() trzeba dodać kierunek w który się porusza i wtedy jak w drugą strone 
+                // Collider2D attackRange = Physics2D.OverlapCircleAll() trzeba dodać kierunek w który się porusza i wtedy jak w drugą strone 
 
                 Health.myHealth--;
                 float fireRate = 1f;
@@ -346,39 +472,4 @@ public class EnemyBoss : MonoBehaviour
 
         //dazedTime = startDazedTime;
     }
-
-    //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.pink;
-    //    Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1));
-    //}
-    //if (_bossState == EnemyStateEnum.BossState.SecondState)
-    //{
-    //    if (!canDash && !_canBlock)
-    //    {
-    //        if (Vector2.Distance(transform.position, _playerLastPosition) >= _stoppingDistance)
-    //        {
-    //        if (Vector2.Distance(transform.position, moveSpots[_randomSpot].position) < 0.2f) // distance between 2 spots then wait some time and taking another spot
-    //            {
-
-    //                _randomSpot = Random.Range(0, moveSpots.Length);
-    //            }
-
-    //        }
-    //        else if (Vector2.Distance(transform.position, _playerLastPosition) <= 0)
-    //        {
-    //            _storedPlayerPosition = false;
-    //            if (!_storedPlayerPosition)
-    //            {
-    //                StorePlayerPosition();
-    //                Debug.Log(_storedPlayerPosition);
-    //                _storedPlayerPosition = true;
-
-    //            }
-    //            // deal dmg
-
-    //        }
-    //    }
-
-    //}
 }
