@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{e397828f-2dcf-4b2b-bea9-05ed18e6e271}">
+		<property name="name">
+			<value>Boss Stage</value>
+		</property>
+		<relationship name="folder">
+			<destination>{e47cbed3-a544-474e-b286-b280215982f0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d1412f9f-11ab-48fc-90d8-d01e724a55db}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d1412f9f-11ab-48fc-90d8-d01e724a55db}">
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

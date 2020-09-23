@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{05307504-c166-4ca7-959b-39a4174f4f0a}">
+		<property name="assetPath">
+			<value>The Dark Lord.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>108.09469387755102</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1ead9a6-6cc3-4d3b-8c91-7cfaac8ce55a}</destination>
+		</relationship>
+	</object>
+</objects>
