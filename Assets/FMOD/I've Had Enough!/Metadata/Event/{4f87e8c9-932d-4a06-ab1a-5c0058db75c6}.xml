@@ -199,6 +199,9 @@
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{080f4cdd-a165-41cc-a1de-91df5e1f733d}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
 		<property name="name">
 			<value>Ambience Music</value>
 		</property>
@@ -253,6 +256,9 @@
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{187f8f2e-9db9-4700-ac93-787e2a80a3bb}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
 		<property name="name">
 			<value>Combat Music</value>
 		</property>
